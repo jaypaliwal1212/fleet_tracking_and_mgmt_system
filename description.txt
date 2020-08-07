@@ -1,0 +1,8 @@
+This file describes the code uploaded in this repository:
+The uploaded code creates a very basic frontend of a web application made using python-flask which performs various tasks.
+The application is used for various seemingly unrelated tasks which in hindsight are all completely related. The frontend is made by basic HTML programming and the backend invloves the use of tkinter, sqlite, pymysql, pandas, ast, requests and many oter useful libraries.
+Funtionalities of the code:
+1. Taking a text file containing a strings of data sent by the gps tracking hardware and parsing it to geet meaningful data and storing it in the company's mysql database. The key to parsing the sting which is part hexadecimal part binary but all of the same lengths was supplied by the hardware's manufacturer.
+2. The data saved in the previous step contains locations in coordinates. So, to make the locations more legible to the customer, using reversegeocode api from mapmyindia we get locations for the supplied coordinates.
+3. the data obtained in the previous step, saved in the database, is further manupulated to obtain the stoppage time of the vehicles and stoppage locations and then saved in the dagtabase.
+4. the final step takes all the database data of a client that is different different tables refering to specific devices and makes a fresh table with coordinates, vehicle numbers and stoppage times. this data is then used to make a heatplot map of stoppage locations to help the customer see where their vehicles halt fot the longest which in tern helps them optimize their operations.
